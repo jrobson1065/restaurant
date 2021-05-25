@@ -25,8 +25,17 @@
   - Sun: 5pm - 10pm  (normal hours)
 
 #Example Directory:
-![Image of Directory]
-(https://github.com/jrobson1065/restaurant/blob/dev/directory.jpg)
+    restaurant/
+      js/
+        helperClasses/
+          calendarHelper.js
+          observerHelper.js
+          singletonHelper.js
+          tableHelper.js
+        app.js
+        library.js (optional)
+        restaurant.js
+      index.html
     
 
 #Assumptions:
