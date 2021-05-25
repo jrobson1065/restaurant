@@ -4,9 +4,11 @@
 # Git Requirements:
   - [ ] Your code should be committed frequently and pushed at the end of each working session (never leave unpushed code overnight).
   - [ ] Do NOT work in the Master (Dev) branch EVER. Create a separate feature branch for each "feature" as you implement it, then merge when you have a working feature. (SEE GIT INSTRUCTIONS BELOW)
+  - [ ] This repo should be consistently forked to your branch (initially and after every merge)
 
 # Code Requirements:
   - [ ] Your code should follow the single-responsibility principle of the SOLID methodology and should follow the inheritance and encapsulation pillars of APIE (OOP).
+  - [ ] Your code should have console logs that demonstrate the code flow as reservations are created and modified, etc.
   - [ ] There should only ever be 1 instance of your restaurant. Include logic that prevents creating a second restaurant. (Singleton Pattern)
   - [ ] Allow guests to get an alert 1 hour before their scheduled reservation. (Observer Pattern)
   - [ ] Reservations should be generated from a reservation class that can consistently generate new reservation objects as needed. (Factory Pattern)
