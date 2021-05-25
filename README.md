@@ -25,17 +25,17 @@
   - Sun: 5pm - 10pm  (normal hours)
 
 #Example Directory:
-    ```restaurant/
-      js/
-        helperClasses/
-          calendarHelper.js
-          observerHelper.js
-          singletonHelper.js
-          tableHelper.js
-        app.js
-        library.js (optional)
-        restaurant.js
-      index.html```
+```restaurant/
+  js/
+    helperClasses/
+      calendarHelper.js
+      observerHelper.js
+      singletonHelper.js
+      tableHelper.js
+    app.js
+    library.js (optional)
+    restaurant.js
+  index.html```
     
 
 #Assumptions:
