@@ -10,8 +10,9 @@
   - [ ] Your code should follow the single-responsibility principle of the SOLID methodology and should follow the inheritance and encapsulation pillars of APIE (OOP).
   - [ ] Your code should have console logs that demonstrate the code flow as reservations are created and modified, etc.
   - [ ] There should only ever be 1 instance of your restaurant. Include logic that prevents creating a second restaurant. (Singleton Pattern)
-  - [ ] Allow guests to get an alert 1 hour before their scheduled reservation. (Observer Pattern)
   - [ ] Reservations should be generated from a reservation class that can consistently generate new reservation objects as needed. (Factory Pattern)
+  - [ ] The process of creating a reservation should happen in several steps as you attempt retrieve information (eg: restaurant hours, seats available, etc). (Builder Pattern)
+  - [ ] Allow guests to get an alert 1 hour before their scheduled reservation. (Observer Pattern)
   - [ ] Accept reservations as objects that get stored in the restaurant object. (Mediator Pattern)
 
 # Functionality Requirements:
@@ -22,6 +23,7 @@
   - [ ] Your restaurant should be closed at least 1 day a week.
   - [ ] Your restaurant should have normal hours (you can pick your own hours).
   - [ ] Your restaurant should have extended hours as well (see example below).
+  - [ ] You should not allow reservations later than 1 hour before closing.
 
 # Example Restaurant Hours:
 ```
