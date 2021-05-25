@@ -24,18 +24,9 @@
   - Sat: 5pm - 12am  (extended hours)
   - Sun: 5pm - 10pm  (normal hours)
 
-#Example File Structure:
-  restaurant/
-    js/
-      helperClasses/
-        calendarHelper.js
-        singletonHelper.js
-        observerHelper.js
-        tableHelper.js
-      app.js
-      restaurant.js
-      library.js (optional)
-    index.html
+#Example Directory:
+![Image of Directory]
+(https://github.com/jrobson1065/restaurant/blob/dev/directory.jpg)
     
 
 #Assumptions:
