@@ -90,6 +90,7 @@ restaurant/
 ```
 
   If you are creating a new feature branch through your bash terminal:
+  ** YOU MAY BE REQUIRED TO MAKE A CHANGE / COMMIT BEFORE YOU DO THE PUSH UPSTREAM (PUSH -U)
 ```
     $ git checkout -b feature/my-new-branch
     $ git push -u origin feature/my-new-branch
