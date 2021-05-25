@@ -1,5 +1,5 @@
 # Objective:
-  ## Create an application for your restaurant that allow users to make and modify reservations.
+  ## Create an application for your restaurant that allows users to make and modify reservations.
   
 # Git Requirements:
   - [ ] Your code should be committed frequently and pushed at the end of each working session (never leave unpushed code overnight).
@@ -12,9 +12,9 @@
   - [ ] Reservations should be generated from a reservation class that can consistently generate new reservation objects as needed. (Factory Pattern)
   - [ ] Accept reservations as objects that get stored in the restaurant object. (Mediator Pattern)
 
-
 # Functionality Requirements:
   - [ ] Should be able to create a new reservation, edit a reservation, and delete a reservation.
+  - [ ] Reservations will require a new Date() object for the time - DO NOT USE A STRING. A new Date() object is standard for when a user clicks on a calendar date on a website a sends a form.
   - [ ] You should know how many customers you can accommodate at once. Do not allow reservations to exceed your max capacity.
   - [ ] Each reservation should have a 1 hour time slot (for simplicity).
   - [ ] Your restaurant should be closed at least 1 day a week.
@@ -39,6 +39,7 @@ restaurant/
     helperClasses/
       calendarHelper.js
       observerHelper.js
+      reservationHelper.js
       singletonHelper.js
       tableHelper.js
     app.js
@@ -54,14 +55,15 @@ restaurant/
   - Assume that every guest will have exactly the number of people listed in the reservation (no extra people, no missing people).
 
 # GIT Instructions:
-  commits should be at least every 30 minutes, even if code isn't working (avoid pushing code that isn't working, but committing is fine)
+  Commits should be at least every 30 minutes, even if code isn't working (avoid pushing code that isn't working, but committing is fine)
   
-  if you added a new file since your last commit:
+  If you added a new file since your last commit:
 ```
     $ git add .
     $ git commit -m "message"
 ```
-  if you did not add any new files since your last commit:
+
+  If you did not add any new files since your last commit:
 ```
     $ git commit -am "message"
 ```
@@ -80,16 +82,23 @@ restaurant/
     $ git branch -d feature/my-old-branch
 ```
 
-  After merging you will be required to create a new branch. This is easiest to do in GitHub directly as it will set the upstream origin for you.
+  After merging you will be required to create a new branch. This is easiest to do in GitHub directly as it will set the upstream to origin for you.
   If you created a new feature branch in GitHub, then do:
 ```
-    git fetch
-    git checkout feature/my-new-branch
+    $ git fetch
+    $ git checkout feature/my-new-branch
 ```
 
   If you are creating a new feature branch through your bash terminal:
 ```
-    git checkout -b feature/my-new-branch
-    git push -u origin feature/my-new-branch
+    $ git checkout -b feature/my-new-branch
+    $ git push -u origin feature/my-new-branch
+```
+
+  The above is a shortcut version of doing this:
+```
+    $ git branch feature/my-new-branch
+    $ git checkout feature/my-new-branch
+    $ git push --set-upstream origin feature/my-new-branch
 ```
   
