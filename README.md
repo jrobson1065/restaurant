@@ -51,9 +51,9 @@ restaurant/
   ```
 
 # Assumptions:
-  - Assume that all reservations will start and end exactly as scheduled. We will assume no customers are late.
-  - Assume that we are open on holidays during normal business hours (whatever you set in your restaurant hours).
-  - Assume that you will not have any walk-in guests - all guests must make a reservation.
+  - Assume that all reservations will start and end exactly as scheduled. Assume that no customers will be early or late.
+  - Assume that your restaurant will be open on holidays during normal business hours (whatever you set in your restaurant hours).
+  - Assume that you will not have any walk-in guests - all guests will have a reservation.
   - Assume that every guest will have exactly the number of people listed in the reservation (no extra people, no missing people).
 
 # GIT Instructions:
