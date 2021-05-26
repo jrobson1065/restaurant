@@ -45,6 +45,7 @@ restaurant/
       observerHelper.js
       reservationHelper.js
       singletonHelper.js
+      tableHelper.js
     app.js
     library.js (optional)
     restaurant.js
