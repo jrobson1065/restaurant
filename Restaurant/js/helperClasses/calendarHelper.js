@@ -1,26 +1,52 @@
-const calendar = {
+class Calendar {
+  constructor() {}
+}
+
+export const calendar = {
   monday: {
-    open: "10am",
-    close: "10pm",
+    1700: 0,
+    1800: 0,
+    1900: 0,
+    2000: 0,
+    2100: 0,
   },
   tuesday: {
-    open: "10am",
-    close: "10pm",
+    1700: 0,
+    1800: 0,
+    1900: 0,
+    2000: 0,
+    2100: 0,
   },
   wednesday: {
-    open: "10am",
-    close: "10pm",
+    1700: 0,
+    1800: 0,
+    1900: 0,
+    2000: 0,
+    2100: 0,
   },
   thursday: {
-    open: "10am",
-    close: "10pm",
+    1700: 0,
+    1800: 0,
+    1900: 0,
+    2000: 0,
+    2100: 0,
   },
   friday: {
-    open: "10am",
-    close: "12am",
+    1700: 0,
+    1800: 0,
+    1900: 0,
+    2000: 0,
+    2100: 0,
+    2200: 0,
+    2300: 0,
   },
   saturday: {
-    open: "10am",
-    close: "12am",
+    1700: 0,
+    1800: 0,
+    1900: 0,
+    2000: 0,
+    2100: 0,
+    2200: 0,
+    2300: 0,
   },
 };

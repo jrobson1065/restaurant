@@ -1,3 +1,5 @@
+import { calendar } from "./calendarHelper.js";
+
 class Reservation {
   constructor(name, time, size) {
     this.name = name;
@@ -9,16 +11,18 @@ class Reservation {
   }
 }
 
-class ReservationBuilder {
+export class ReservationBuilder {
   constructor(name) {
     this.name = name;
     console.log(`${name} started a reservation, please select a time`);
   }
 
   setTime(time) {
-    this.time = time;
     console.log(`checking to see if ${time} is available`);
-    console.log(`${time} is available, what size is  your party?`);
+    if (time in calendar.monday) {
+      this.time = time;
+      console.log(`${time} is available, what size is  your party?`);
+    } else console.log(`${time} is unavailable`);
     return this;
   }
 
