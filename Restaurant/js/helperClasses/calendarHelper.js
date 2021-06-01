@@ -1,4 +1,8 @@
 class Calendar {
+	static #existingReservations = []
+	
+	
+	
   constructor() {}
 }
 

@@ -18,4 +18,4 @@ class Restaurant extends Singleton {
       this.timeslots = this.timeslots.filter((t) => t != time);
     } else console.log("Cannot make reservation at selected time");
   };
-}
+};
