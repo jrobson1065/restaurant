@@ -1,17 +1,7 @@
 import { calendar } from "./calendarHelper.js";
 
 class Reservation {
-	static #existingReservations = []	
-	
-	checkAvailability = (date, size) => {
-		let seatsTaken = 0
-		
-		Reservation.#existingReservations.filter(r => r.date === date).forEach(r => seatsTaken += r.guests)
-		
-		return (size + seatsTaken <= 20)
-	}
-	
-  constructor(name, {date, size}) {
+  constructor(name, date, size) {
     this.name = name;
     this.date = date;
     this.size = size;
@@ -22,6 +12,7 @@ class Reservation {
 }
 
 export class ReservationBuilder {
+	
   constructor(name) {
     this.name = name;
     console.log(`${name} started a reservation, please select a time`);
@@ -37,10 +28,15 @@ export class ReservationBuilder {
   }
 
   setSize(size) {
-    this.size = size;
     console.log(`Checking to see if we have room for ${size} people`);
-    console.log(`We have room for ${size} people`);
-    return this;
+		
+		if (calendar.checkAvailability(this.date, size)) {
+    	console.log(`We have room for ${size} people`);
+			
+			this.size = size;
+			
+    	return this;
+		}
   }
 
   build() {
