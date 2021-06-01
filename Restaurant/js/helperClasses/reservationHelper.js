@@ -1,9 +1,17 @@
 import { calendar } from "./calendarHelper.js";
 
 class Reservation {
-	static #activeReservations = []
+	static #existingReservations = []	
 	
-  constructor(name, date, size) {
+	checkAvailability = (date, size) => {
+		let seatsTaken = 0
+		
+		Reservation.#existingReservations.filter(r => r.date === date).forEach(r => seatsTaken += r.guests)
+		
+		return (size + seatsTaken <= 20)
+	}
+	
+  constructor(name, {date, size}) {
     this.name = name;
     this.date = date;
     this.size = size;
