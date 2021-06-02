@@ -9,8 +9,13 @@
   <body>
     <script>
       d = new Date();
-      d.setDate(3)
+      console.log(d.setDate(3));
+      d.setHours(17);
+      d.setMinutes(0);
+      d.setSeconds(0);
       console.log(d.toLocaleString());
+      console.log(d);
+      if (0) console.log("truthy");
     </script>
   </body>
 </html>
