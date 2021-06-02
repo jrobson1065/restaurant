@@ -1,19 +1,20 @@
-class Calendar {
-	static existingReservations = []	
-	
-	checkAvailability = (date, size) => {
-		let seatsTaken = 0
-		
-		Calendar.existingReservations.filter(r => r.date === date).forEach(r => seatsTaken += r.size)
-		
-		return (size + seatsTaken <= 20)
-	}
-	
-	
+export class Calendar {
+  static existingReservations = [];
+
+  checkAvailability = (date, size) => {
+    let seatsTaken = 0;
+
+    Calendar.existingReservations
+      .filter((r) => r.date === date)
+      .forEach((r) => (seatsTaken += r.size));
+
+    return size + seatsTaken <= 20;
+  };
+
   constructor() {}
 }
 
-export const calendar = {
+const calendar = {
   monday: {
     1700: 0,
     1800: 0,
