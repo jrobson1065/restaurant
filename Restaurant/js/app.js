@@ -1,5 +1,7 @@
-import { ReservationBuilder } from "./helperClasses/reservationHelper.js";
+import { Restaurant } from "./restaurant.js";
 
-const reservation = new ReservationBuilder("kevin");
+const coccosPizza = new Restaurant("Coccos Pizzeria", 8);
 
-reservation.setTime(2000);
+console.log(coccosPizza);
+
+coccosPizza.createReservation(4, "Kevin", "Tomorrow");
