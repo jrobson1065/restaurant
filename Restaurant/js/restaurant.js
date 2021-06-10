@@ -1,13 +1,13 @@
-import { CalendarHelper } from "./helperClasses/calendarHelper.js";
-import { ReservationHandler } from "./helperClasses/reservationHelper.js";
-import { TableHelper } from "./helperClasses/tableHelper.js";
+import {
+  ReservationHandler,
+  Reservation,
+} from "./helperClasses/reservationHelper.js";
 
 export class Restaurant {
-  constructor(name, maxPartySize) {
+  constructor(name, maxPartySize, maxCapacity) {
     this.name = name;
     this.maxPartySize = maxPartySize;
-    this.table = new TableHelper(this);
-    this.calendar = new CalendarHelper(this);
+    this.maxCapacity = maxCapacity;
     this.reservationHelper = new ReservationHandler(this);
 
     this.normalHours = { open: "5pm", close: "10pm" };
@@ -17,6 +17,10 @@ export class Restaurant {
 
   setMaxPartySize = (size) => (this.maxPartySize = size);
   getMaxPartySize = () => this.maxPartySize;
+  setMaxCapacity = (size) => (this.maxCapacity = size);
+  getMaxCapacity = () => this.maxCapacity;
+  getHours = () => this.hoursOfOperation;
+  getName = () => this.name;
 
   setNormalHours = (openTime, closeTime) => {
     if (openTime) this.normalHours.open = openTime;
@@ -44,6 +48,23 @@ export class Restaurant {
 
   createReservation = (size, name, date) => {
     console.log("Restaurant received reservation request");
-    this.reservationHelper.startReservation(size, name, date);
+    const res = this.reservationHelper.startReservation(size, name, date);
+    if (res instanceof Reservation) return res;
   };
+
+  modifyReservation = (id, mod) => {
+    console.log("Reservation modification requested");
+
+    return this.reservationHelper.modifyReservation(id, mod);
+  };
+
+  cancelReservation = (id) => this.reservationHelper.deleteReservation(id);
+  findReservation = (id) => this.reservationHelper.findReservation(id);
+
+  modifyName = (id, name) => this.modifyReservation(id, { name });
+  modifySize = (id, size) => this.modifyReservation(id, { size });
+  modifyDateTime = (id, dateTime) => this.modifyReservation(id, { dateTime });
 }
+
+// Search for Res by optional parameters
+// Allow customers to search for res then delete or modify said res
