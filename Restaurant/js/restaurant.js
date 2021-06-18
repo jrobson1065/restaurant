@@ -68,3 +68,4 @@ export class Restaurant {
 
 // Search for Res by optional parameters
 // Allow customers to search for res then delete or modify said res
+
